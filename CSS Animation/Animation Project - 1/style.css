@@ -30,80 +30,101 @@ p {
   background-color: #fd1c00;
 }
 
-.top-section nav{
-    height: 35%;
-    width: 100%;
-    display: flex;
-    padding: 0 2rem;
+.top-section nav {
+  height: 35%;
+  width: 100%;
+  display: flex;
+  padding: 0 2rem;
 }
 
-.top-section nav .nav-left{
-    height: 100%;
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.2rem;
-    color: whitesmoke;
+.top-section nav .nav-left {
+  height: 100%;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  gap: 0.2rem;
+  color: whitesmoke;
 }
 
-.nav-links{
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 0.1rem;
+.nav-links {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: fit-content;
+  animation: landing-para-animation 1.8s ease-out;
 }
 
-.nav-links::before{
-    content: "";
-    height: 10%;
-    width: 1%;
-    top: 0%;
-    background-color: blue;
+.nav-links::before {
+  content: "";
+  height: 10%;
+  width: 0.7vw;
+  top: 0%;
+  transition: width 0.2s ease-out;
+  background-color: whitesmoke;
 }
 
-.nav-links:hover::before{
-    transform: scaleX(3.8);
-    transform-origin: left;
+.nav-links:hover::before {
+  width: 2vw;
+  transform-origin: left;
 }
 
-.nav-links h3{
-    font-size: 1.4rem;
+.nav-links h3 {
+  font-size: 1.4rem;
 }
 
-.top-section nav .nav-right{
-    height: 100%;
-    width: 35%;
+.nav-right {
+  padding-top: 2rem;
 }
 
-
-.top-section .heading{
-    height: 65%;
-    width: 100%;
-    display: flex;
-    align-items: end;
-    overflow: hidden;
+.nav-right p {
+  font-size: 1.15rem;
+  color: whitesmoke;
+  width: 20ch;
+  margin-bottom: 1rem;
+  animation: landing-para-animation 1.8s ease-out;
 }
 
-.top-section .heading h1{
-    font-size: 16rem;
-    color: whitesmoke;
-    font-weight: 500;
-    line-height: 0.9;
-    animation: landing-text-animation 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+@keyframes landing-para-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.top-section nav .nav-right {
+  height: 100%;
+  width: 35%;
+}
+
+.top-section .heading {
+  height: 65%;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  overflow: hidden;
+}
+
+.top-section .heading h1 {
+  font-size: 16rem;
+  color: whitesmoke;
+  font-weight: 500;
+  line-height: 0.9;
+  animation: landing-text-animation 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 @keyframes landing-text-animation {
-    from{
-        transform: translateY(120%);
-    }
-    to{
-        transform: translateY(0);
-    }
+  from {
+    transform: translateY(120%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
-
-
 
 .bottom-section {
   height: 45%;
@@ -115,7 +136,12 @@ p {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  animation: landing-image-animation 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: scale 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation: landing-image-animation 1.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.bottom-section:hover img {
+  scale: 1.15;
 }
 
 @keyframes landing-image-animation {
@@ -125,4 +151,191 @@ p {
   to {
     scale: 1;
   }
+}
+
+.list-page {
+  min-height: 100vh;
+  width: 100%;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: whitesmoke;
+}
+
+.list-div {
+  display: flex;
+  height: 25vh;
+  width: 100%;
+  border-top: 2px rgb(95, 94, 94) solid;
+  transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.list-number {
+  height: 100%;
+  width: 55%;
+  display: flex;
+  align-items: center;
+}
+
+.list-number h2 {
+  font-size: 15rem;
+  line-height: 0.7;
+  font-weight: 450;
+  letter-spacing: -0.8rem;
+}
+
+.list-info {
+  height: 100%;
+  width: 45%;
+  display: flex;
+  padding: 1rem 0rem;
+}
+
+.list-description {
+  height: 100%;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.list-description p {
+  font-size: 1.5rem;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.list-description h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.list-img {
+  height: 100%;
+  width: 55%;
+  display: flex;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.list-img img {
+  height: 100%;
+  width: 45%;
+  object-fit: cover;
+  transform: translateY(120%);
+  transition: transform 0.37s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.list-div:hover .list-img img {
+  transform: translateY(0%);
+}
+
+.list-div:hover {
+  background-color: #fd1c00;
+  color: whitesmoke;
+}
+
+.marque-section {
+  height: 35vh;
+  width: 100%;
+  background-color: whitesmoke;
+  padding: 2rem 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.marque-track {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
+  animation: marque-animation 8s linear infinite;
+}
+
+.marque-track img {
+  height: 100%;
+  width: calc(100% / 6);
+  object-fit: cover;
+}
+
+@keyframes marque-animation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+footer {
+  height: 100vh;
+  width: 100%;
+  background-color: whitesmoke;
+  padding: 2rem 2rem;
+  overflow: hidden;
+}
+
+.footer-top {
+  height: 65%;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.footer-top-div {
+  height: 100%;
+  width: 35%;
+}
+
+.footer-image-div{
+  height: 75%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.footer-top-div .footer-image-div img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: saturate(0);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.footer-image-div:hover img{
+  scale: 1.25;
+  filter: saturate(100%);
+}
+
+.footer-description{
+  height: 25%;
+  width: 100%;
+  display: flex;
+  align-items: end;
+}
+
+.footer-description p{
+  font-size: 1.3rem;
+  width: 40ch;
+  text-wrap: balance;
+}
+
+.footer-bottom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-bottom h2{
+  font-size: 24rem;
+  transition: color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
+}
+
+.footer-bottom h2:hover{
+  color: #fd1c00;
 }

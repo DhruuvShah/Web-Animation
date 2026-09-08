@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+span {
+  font-family: "Google Sans", sans-serif;
+}
+
+h3,
+h4,
+p {
+  font-family: "Lato", sans-serif;
+}
+
+.landing-page {
+  height: 120vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.top-section {
+  height: 55%;
+  width: 100%;
+  background-color: #fd1c00;
+}
+
+.top-section nav{
+    height: 35%;
+    width: 100%;
+    display: flex;
+    padding: 0 2rem;
+}
+
+.top-section nav .nav-left{
+    height: 100%;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.2rem;
+    color: whitesmoke;
+}
+
+.nav-links{
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+}
+
+.nav-links::before{
+    content: "";
+    height: 10%;
+    width: 1%;
+    top: 0%;
+    background-color: blue;
+}
+
+.nav-links:hover::before{
+    transform: scaleX(3.8);
+    transform-origin: left;
+}
+
+.nav-links h3{
+    font-size: 1.4rem;
+}
+
+.top-section nav .nav-right{
+    height: 100%;
+    width: 35%;
+}
+
+
+.top-section .heading{
+    height: 65%;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    overflow: hidden;
+}
+
+.top-section .heading h1{
+    font-size: 16rem;
+    color: whitesmoke;
+    font-weight: 500;
+    line-height: 0.9;
+    animation: landing-text-animation 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes landing-text-animation {
+    from{
+        transform: translateY(120%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+
+
+.bottom-section {
+  height: 45%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bottom-section img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  animation: landing-image-animation 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes landing-image-animation {
+  from {
+    scale: 1.8;
+  }
+  to {
+    scale: 1;
+  }
+}

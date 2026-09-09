@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #010101;
+}
+
+.signature{
+    stroke-dasharray: 1;
+    stroke-dashoffset: 0.6;
+}

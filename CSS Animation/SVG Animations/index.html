@@ -10,16 +10,58 @@
 
 <body>
     <div id="app">
-        <svg width="300" height="140" viewBox="0 0 300 120">
+        <!-- <svg width="300" height="140" viewBox="0 0 300 120">
             <path 
-            class="signature"  
-            pathLenght="1"
-            d="M10,80 C60,10 120,120 180,40 S260,10 290,60" 
+            class="signature" 
+            pathLength="1" d="M10,80 C60,10 120,120 180,40 S260,10 290,60" 
             fill="none"
             stroke="#ffff" 
-            stroke-width="4" />
+            stroke-width="4" 
+        />
+        </svg> -->
+
+        <!-- <svg width="400" height="170" viewBox="0 0 400 150">
+            <path 
+            id="track" 
+            d="M10,120 C120,-20 280, 320 390, 30" 
+            fill="none" 
+            stroke="#ddd" 
+            stroke-width="2" 
+            />
+            <circle class="ball" r="10" fill="#e17055"/>
+        </svg> -->
+
+        <!-- <svg width="120" height="120">
+            <circle cx="60" cy="60" r="15" fill="#00b894">
+                <animate
+                    attributeName="r"
+                    values="15;30;15"
+                    dur="2s"
+                    repeatCount="indefinite"
+                />
+            </circle>
+        </svg> -->
+
+        <svg class="wave-text" viewBox="0 0 500 60">
+            <path 
+            id="curve" 
+            d="M10,40 C130,-10 370,90 490,30" 
+            fill="none" 
+            />
+            <text font-size="24" fill="#fefefe">
+                <textPath href="#curve" startOffset="0%">
+                    Creative Web Developer
+                    <animate 
+                    attributeName="startOffset" 
+                    from="0%" to="100%" 
+                    dur="8s" 
+                    repeatCount="indefinite" 
+                />
+                </textPath>
+            </text>
         </svg>
     </div>
+
 </body>
 
 </html>

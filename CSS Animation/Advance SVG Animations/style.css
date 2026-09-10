@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #010101;
+}
+
+.goo-wrap {
+  filter: url(#goo);
+  width: 200px;
+  height: 100px;
+  position: relative;
+}
+
+.blob {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #6c5ce7;
+  animation: drift 2.5s ease-in-out infinite alternate;
+}
+
+.blob2 {
+  animation-delay: -1.2s;
+}
+
+@keyframes drift {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+.goo-text {
+  text-align: center;
+  font-size: 4rem;
+  color: #fefefe;
+}

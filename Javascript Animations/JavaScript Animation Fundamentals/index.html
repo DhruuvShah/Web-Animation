@@ -5,21 +5,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
-  <title>JavaScript Animation Fundamentals</title>
+  <title>JoJo's Bizarre Adventure — Motion Study</title>
 </head>
 
 <body>
   <div id="app">
+    <div class="sunburst" aria-hidden="true"></div>
+    <div class="sound-effect sound-effect-left" aria-hidden="true">ゴゴゴ</div>
+    <div class="sound-effect sound-effect-right" aria-hidden="true">メメタ</div>
+    <header class="masthead">
+      <p class="chapter-mark">Motion study <span>01</span></p>
+      <p class="creator-mark">A bizarre visual field</p>
+    </header>
     <!-- Custom-Cursor -->
     <div class="cursor"></div>
     <div class="wrapper" data-trail-zone>
       <div id="trail-layer"></div>
+      <p class="instruction">Move through the <em>strange</em></p>
       <h1 id="hero-title">
         <span class="word">JoJo's</span>
         <span class="word">Bizarre</span>
         <span class="word">Adventure</span>
       </h1>
+      <div class="corner-stamp" aria-hidden="true"><span>STAND</span><b>01</b></div>
     </div>
+    <footer class="page-footer"><span>All roads lead to destiny</span><span>← Move your cursor</span></footer>
   </div>
   <script type="module" src="main.js"></script>
 </body>

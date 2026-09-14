@@ -1,85 +1,11 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #010101;
-}
-
-.carousal-scene {
-  height: 100vh;
-  width: 100%;
-  perspective: 1300px;
-  overflow: hidden;
-}
-
-.carousal {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  transform-style: preserve-3d;
-  animation: spin 20s linear infinite;
-}
-
-.carousal:hover{
-    animation-play-state: paused;
-}
-
-.carousal-items {
-  height: 25%;
-  width: 10%;
-  position: absolute;
-}
-
-.carousal-items img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.carousal-items:nth-child(1) {
-  transform: rotateY(0deg) translateZ(500px);
-}
-
-.carousal-items:nth-child(2) {
-  transform: rotateY(45deg) translateZ(500px);
-}
-
-.carousal-items:nth-child(3) {
-  transform: rotateY(90deg) translateZ(500px);
-}
-
-.carousal-items:nth-child(4) {
-  transform: rotateY(135deg) translateZ(500px);
-}
-
-.carousal-items:nth-child(5) {
-  transform: rotateY(180deg) translateZ(500px);
-}
-
-.carousal-items:nth-child(6) {
-  transform: rotateY(225deg) translateZ(500px);
-}
-
-.carousal-items:nth-child(7) {
-  transform: rotateY(270deg) translateZ(500px);
-}
-
-.carousal-items:nth-child(8) {
-  transform: rotateY(315deg) translateZ(500px);
-}
-
-@keyframes spin {
-  from {
-    transform: rotateY(0);
-  }
-  to {
-    transform: rotateY(360deg);
-  }
-}
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Unbounded:wght@500;700;900&display=swap");
+:root { --void:#080a0d; --acid:#d9ff37; --signal:#ff542e; --paper:#eee8dc; }
+* { padding: 0; margin: 0; box-sizing: border-box; }
+body { min-width: 320px; overflow: hidden; background: var(--void); color: var(--paper); font-family: "DM Mono", monospace; }
+.carousel-page { height: 100svh; min-height: 38rem; padding: clamp(1.2rem, 3vw, 2.5rem); display: grid; grid-template-columns: minmax(16rem,.7fr) minmax(22rem,1.3fr); gap: clamp(1.5rem,4vw,5rem); align-items: center; overflow: hidden; background: radial-gradient(circle at 77% 50%, #2b3b1a 0, transparent 22rem), repeating-linear-gradient(90deg, transparent 0 4.9%, rgba(217,255,55,.07) 5% 5.1%), var(--void); }
+.page-header { align-self: stretch; padding: clamp(4rem,8vw,7rem) 0 1rem; display:flex; flex-direction:column; justify-content:space-between; border-right:1px solid rgba(217,255,55,.45); }
+.eyebrow,.panel-label { color:var(--acid); font-size:.65rem; font-weight:500; letter-spacing:.12em; text-transform:uppercase; }.eyebrow::before { content:"● "; color:var(--signal); }
+h1 { max-width:8ch; font-family:"Unbounded",sans-serif; font-size:clamp(2.8rem,6vw,6.5rem); font-weight:900; letter-spacing:-.11em; line-height:.83; text-transform:uppercase; }h1 em { display:block; color:var(--acid); font-style:normal; -webkit-text-stroke:1px var(--acid); text-shadow:5px 5px 0 var(--signal); }.page-header > p:last-child { max-width:21ch; color:#b8b7b0; line-height:1.6; font-size:.78rem; }
+.carousel-panel { height:min(80vh,48rem); min-height:31rem; position:relative; display:grid; grid-template-rows:auto 1fr; border:1px solid rgba(238,232,220,.55); border-radius:0; background:#12171a; overflow:hidden; box-shadow:14px 14px 0 var(--signal); }.carousel-panel::before { content:"SPECIMEN VAULT — DO NOT TOUCH THE GLASS"; position:absolute; z-index:2; bottom:1.1rem; left:1.1rem; color:var(--acid); font-size:.55rem; letter-spacing:.12em; writing-mode:vertical-rl; }.panel-label { display:flex; justify-content:space-between; padding:1rem 1.3rem; color:var(--void); background:var(--acid); }
+.carousal-scene { height:100%; width:100%; perspective:1300px; overflow:hidden; }.carousal { height:100%; width:100%; display:flex; align-items:center; justify-content:center; position:relative; transform-style:preserve-3d; animation:spin 20s linear infinite; }.carousal:hover { animation-play-state:paused; }.carousal-items { height:25%; width:10%; position:absolute; }.carousal-items img { height:100%; width:100%; object-fit:cover; border-radius:0; border:3px solid var(--acid); box-shadow:0 0 0 4px var(--void), 0 12px 30px rgba(0,0,0,.55); filter:saturate(.8) contrast(1.1); }.carousal-items:nth-child(1) { transform:rotateY(0deg) translateZ(500px); }.carousal-items:nth-child(2) { transform:rotateY(45deg) translateZ(500px); }.carousal-items:nth-child(3) { transform:rotateY(90deg) translateZ(500px); }.carousal-items:nth-child(4) { transform:rotateY(135deg) translateZ(500px); }.carousal-items:nth-child(5) { transform:rotateY(180deg) translateZ(500px); }.carousal-items:nth-child(6) { transform:rotateY(225deg) translateZ(500px); }.carousal-items:nth-child(7) { transform:rotateY(270deg) translateZ(500px); }.carousal-items:nth-child(8) { transform:rotateY(315deg) translateZ(500px); }@keyframes spin { from { transform:rotateY(0); } to { transform:rotateY(360deg); } }
+@media (max-width:750px) { body{overflow:auto}.carousel-page{height:auto;min-height:100svh;grid-template-columns:1fr;padding:1.25rem}.page-header{min-height:16rem;padding:2rem 0;border-right:0;border-bottom:1px solid rgba(217,255,55,.45)}.carousel-panel{height:34rem;box-shadow:8px 8px 0 var(--signal)} }

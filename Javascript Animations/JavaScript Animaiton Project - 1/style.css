@@ -417,9 +417,9 @@ nav.animate-up.done {
 }
 
 .hero.animate-up.done {
-  transition-delay: 0.4s;
+  transition-delay: 0.50s;
 }
 
 .bottom.animate-up.done {
-  transition-delay: 0.6s;
+  transition-delay: 0.90s;
 }

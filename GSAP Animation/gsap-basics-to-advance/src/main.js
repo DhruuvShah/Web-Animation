@@ -1,13 +1,10 @@
 import "./style.css";
 import gsap from "gsap";
 
-gsap.fromTo(
-  ".box",
-  {
-    opacity: 0,
-  },
-  {
-    opacity: 1,
-    duration: 1,
-  },
-);
+gsap.to(".box", {
+  x: 900,
+  duration: 1.5,
+  delay: 0.3,
+  ease: "power3.out",
+  stagger: 0.4,
+});

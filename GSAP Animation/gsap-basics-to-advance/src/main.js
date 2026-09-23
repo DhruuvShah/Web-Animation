@@ -6,5 +6,5 @@ gsap.to(".box", {
   duration: 1.5,
   delay: 0.3,
   ease: "power3.out",
-  stagger: 0.4,
+  stagger: -0.4,
 });

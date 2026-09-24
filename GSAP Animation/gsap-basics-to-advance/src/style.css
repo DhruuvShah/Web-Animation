@@ -11,6 +11,25 @@ body {
 .box {
   height: 300px;
   width: 300px;
-  background-color: rebeccapurple;
   margin-bottom: 2rem;
+}
+
+.box1 {
+  background-color: rebeccapurple;
+}
+
+.box2 {
+  background-color: rgb(13, 224, 41);
+}
+
+.box3 {
+  background-color: rgb(219, 46, 182);
+}
+
+.box4 {
+  background-color: rgb(87, 212, 243);
+}
+
+.box5 {
+  background-color: rgb(255, 0, 64);
 }

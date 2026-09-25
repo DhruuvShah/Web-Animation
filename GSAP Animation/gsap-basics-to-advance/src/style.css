@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Sekuya&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -8,28 +10,71 @@ body {
   background-color: black;
 }
 
-.box {
-  height: 300px;
-  width: 300px;
-  margin-bottom: 2rem;
+.loader {
+  height: 100vh;
+  width: 100%;
+  background-color: #010101;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.box1 {
-  background-color: rebeccapurple;
+.loader-count h2 {
+  font-size: 10rem;
+  color: whitesmoke;
+  font-family: "Google Sans", sans-serif;
 }
 
-.box2 {
-  background-color: rgb(13, 224, 41);
+.hero-section{
+  height: 100vh;
+  width: 100%;
+  background-color: aquamarine;
+  position: relative;
+  overflow: hidden;
 }
 
-.box3 {
-  background-color: rgb(219, 46, 182);
+.hero-bg{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
 }
 
-.box4 {
-  background-color: rgb(87, 212, 243);
+.hero-bg img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
-.box5 {
-  background-color: rgb(255, 0, 64);
+.hero-content{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15rem;
 }
+
+.heading, .sub-heading{
+  overflow: hidden;
+}
+
+.hero-content .heading h1{
+  font-size: 13rem;
+  color: rgb(68, 130, 245);
+  font-family: "Google Sans", sans-serif;
+}
+
+.hero-content .sub-heading p{
+  font-size: 3rem;
+  color: cornflowerblue;
+  font-family: "Google Sans", sans-serif;
+  
+}
+

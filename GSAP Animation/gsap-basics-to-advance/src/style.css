@@ -10,6 +10,13 @@ body {
   background-color: black;
 }
 
+.box {
+  height: 300px;
+  width: 300px;
+  background-color: #ff00f2;
+  margin: 2rem;
+}
+
 .loader {
   height: 100vh;
   width: 100%;
@@ -29,28 +36,39 @@ body {
   font-family: "Google Sans", sans-serif;
 }
 
-.hero-section{
+.hero-section {
   height: 100vh;
   width: 100%;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   position: relative;
   overflow: hidden;
 }
 
-.hero-bg{
+.image-div{
+  height: 100%;
+  width: 100%;
+}
+
+.image-div img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-bg {
   height: 100%;
   width: 100%;
   position: absolute;
   z-index: 0;
 }
 
-.hero-bg img{
+.hero-bg img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.hero-content{
+.hero-content {
   height: 100%;
   width: 100%;
   position: relative;
@@ -61,20 +79,20 @@ body {
   padding-top: 15rem;
 }
 
-.heading, .sub-heading{
+.heading,
+.sub-heading {
   overflow: hidden;
 }
 
-.hero-content .heading h1{
+.hero-content .heading h1 {
   font-size: 13rem;
   color: rgb(68, 130, 245);
   font-family: "Google Sans", sans-serif;
 }
 
-.hero-content .sub-heading p{
+.hero-content .sub-heading p {
   font-size: 3rem;
   color: cornflowerblue;
   font-family: "Google Sans", sans-serif;
-  
 }
 

@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #010101;
+}
+
+.app {
+  height: 350vh;
+  position: relative;
+}
+
+.box {
+  height: 300px;
+  width: 300px;
+  background-color: rgb(255, 0, 98);
+  animation: move-box;
+  top: 40%;
+  position: absolute;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes move-box {
+  from {
+    /* transform: translateX(0px); */
+    /* width: 0%; */
+    background-color: red;
+  }
+  50% {
+    background-color: blue;
+  }
+  to {
+    /* transform: translateX(500px); */
+    /* width: 100%; */
+    background-color: green;
+  }
+}

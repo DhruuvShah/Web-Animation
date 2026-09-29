@@ -1,5 +1,5 @@
 import "./style.css";
-import { animate, stagger } from "animejs";
+import { animate, stagger, createTimeline } from "animejs";
 
 // const logoImage = document.querySelector(".logo");
 // const dont = document.querySelector(".dont");
@@ -62,15 +62,38 @@ import { animate, stagger } from "animejs";
 // 	ease: "outQuad",
 // });
 
-animate(".box", {
-  x: [
-    { to: 100 },
-    { to: 100, duration: 500 },
-    { to: 500 },
-    { to: 500, duration: 500 },
-    { to: 0 },
-  ],
-  // delay: stagger(100, { from: "random" }),
-  delay: 500,
-  duration: 500,
-});
+// animate(".box", {
+//   x: [
+//     { to: 100 },
+//     { to: 100, duration: 500 },
+//     { to: 500 },
+//     { to: 500, duration: 500 },
+//     { to: 0 },
+//   ],
+//   // delay: stagger(100, { from: "random" }),
+//   delay: 500,
+//   duration: 500,
+// });
+
+const tl = createTimeline({});
+
+tl.add(".box0", {
+  x: 600,
+  duration: 800,
+  ease: "inOutCubic",
+})
+  .add(".box1", {
+    x: 600,
+    duration: 800,
+    ease: "inOutCubic",
+  },"-=500")
+  .add(".box2", {
+    x: 600,
+    duration: 800,
+    ease: "inOutCubic",
+  })
+  .add(".box3", {
+    x: 600,
+    duration: 800,
+    ease: "inOutCubic",
+  });

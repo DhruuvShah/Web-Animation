@@ -25,6 +25,18 @@ body {
   margin-bottom: 20px;
 }
 
+.box1 {
+  background-color: rgb(0, 38, 255);
+}
+
+.box2 {
+  background-color: rgb(115, 255, 0);
+}
+
+.box3 {
+  background-color: rgb(255, 38, 0);
+}
+
 .ball {
   height: 300px;
   width: 300px;

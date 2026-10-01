@@ -75,25 +75,57 @@ import { animate, stagger, createTimeline } from "animejs";
 //   duration: 500,
 // });
 
-const tl = createTimeline({});
+// const tl = createTimeline({
+//   onComplete: () => console.log("Sequence finished!"),
+// });
 
-tl.add(".box0", {
-  x: 600,
-  duration: 800,
-  ease: "inOutCubic",
-})
-  .add(".box1", {
-    x: 600,
-    duration: 800,
-    ease: "inOutCubic",
-  },"-=500")
-  .add(".box2", {
-    x: 600,
-    duration: 800,
-    ease: "inOutCubic",
-  })
-  .add(".box3", {
-    x: 600,
-    duration: 800,
-    ease: "inOutCubic",
-  });
+// tl.label("dhruv")
+//   .add(
+//     ".box0",
+//     {
+//       x: 600,
+//       duration: 800,
+//       ease: "inOutCubic",
+//     },
+//     "dhruv",
+//   )
+//   .add(
+//     ".box1",
+//     {
+//       x: 600,
+//       duration: 800,
+//       ease: "inOutCubic",
+//     },
+//     "-=500",
+//   )
+//   .add(
+//     ".box2",
+//     {
+//       x: 600,
+//       duration: 800,
+//       ease: "inOutCubic",
+//     },
+//     "dhruv",
+//   )
+//   .add(".box3", {
+//     x: 600,
+//     duration: 800,
+//     ease: "inOutCubic",
+//   });
+
+const tl = createTimeline();
+
+tl.add(".image-div img", {
+  scale: [1.6, 1],
+  duration: 1000,
+  ease: "outCubic",
+}).add(
+  ".title-div h1 span",
+  {
+    y: [500, 0],
+    duration: 1200,
+    ease: "outExpo",
+    delay: stagger(200, { from: "center" }),
+  },
+  "<<",
+);

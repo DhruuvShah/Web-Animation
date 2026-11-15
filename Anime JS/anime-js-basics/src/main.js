@@ -1,5 +1,5 @@
 import "./style.css";
-import { animate, stagger, createTimeline } from "animejs";
+import { animate, stagger, createTimeline, onScroll } from "animejs";
 
 // const logoImage = document.querySelector(".logo");
 // const dont = document.querySelector(".dont");
@@ -113,19 +113,40 @@ import { animate, stagger, createTimeline } from "animejs";
 //     ease: "inOutCubic",
 //   });
 
-const tl = createTimeline();
+// const tl = createTimeline();
 
-tl.add(".image-div img", {
-  scale: [1.6, 1],
-  duration: 1000,
-  ease: "outCubic",
-}).add(
-  ".title-div h1 span",
-  {
-    y: [500, 0],
-    duration: 1200,
-    ease: "outExpo",
-    delay: stagger(200, { from: "center" }),
-  },
-  "<<",
-);
+// tl.add(".image-div img", {
+//   scale: [1.6, 1],
+//   duration: 1000,
+//   ease: "outCubic",
+// }).add(
+//   ".title-div h1 span",
+//   {
+//     y: [500, 0],
+//     duration: 1200,
+//     ease: "outExpo",
+//     delay: stagger(200, { from: "center" }),
+//   },
+//   "<<",
+// );
+
+// animate(".box",{
+//   x: 800,
+//   duration: 700,
+//   autoplay: onScroll({
+//     enter: "center-=50 center",
+//     leave: "top+=100 bottom", 
+//     debug: true,
+//     sync: true,
+//   })
+// })
+
+animate(".dummy-page img",{
+  clipPath: "",
+  ease: "linear",
+  autoplay: onScroll({
+    enter: "bottom-=100 top",
+    leave: "center center",
+    sync: true,
+  })
+})

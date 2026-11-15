@@ -21,7 +21,7 @@ body {
   gap: 1.5rem;
 } */
 
-.box {
+/* .box {
   height: 300px;
   width: 300px;
   background-color: rgb(255, 0, 106);
@@ -140,4 +140,17 @@ body {
 .title-div h1 span {
   display: inline-block;
   transform: translateY(500px);
+} */
+
+.dummy-page{
+  height: 100vh;
+  width: 100%;
+}
+
+.dummy-page img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  clip-path: inset(25% 16% 26% 17%);
 }
